@@ -1,0 +1,142 @@
+<android.support.design.widget.CoordinatorLayout
+             android:id="@+id/coordinator_layout_news_feed"
+             xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             tools:context="com.code_dream.almanach.news_feed.FragmentNewsFeed">
+
+    <ProgressBar
+        android:id="@+id/news_feed_progress_bar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:id="@+id/news_feed_empty_data_set_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_cloud_error"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="No Internet connection"
+            android:textSize="20sp"
+            android:paddingBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go Online to see the latest school happenings in your area"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/news_feed_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/news_feed_swipe_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/news_feed_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/tint_view"
+        android:visibility="gone"
+        android:clickable="true"
+        android:background="@color/colorTransparentDimGray"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <FrameLayout
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@android:color/white"
+        android:clipToPadding="true"
+        app:behavior_hideable="true"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="4dip"
+                android:background="@color/colorViewSeparator"
+                android:layout_marginBottom="25dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/news_feed_bottom_sheet_take_picture_tv"
+                    android:clickable="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_camera"
+                    android:drawablePadding="10dp"
+                    android:text="Take a picture"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_weight="0.5"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp"/>
+
+                <TextView
+                    android:id="@+id/news_feed_bottom_sheet_gallery_tv"
+                    android:clickable="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_gallery"
+                    android:drawablePadding="10dp"
+                    android:text="Choose from Gallery"
+                    android:textSize="18sp"
+
+                    android:gravity="center"
+                    android:layout_weight="0.5"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:map="http://schemas.android.com/tools"
+              android:id="@+id/fragment_slide_school_location"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:paddingTop="30dp"
+              android:paddingLeft="20dp"
+              android:paddingRight="20dp"
+              android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:id="@+id/slide_new_school_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="40dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="We'll show the suggested locations if any, but feel free to select your own location:"
+            android:textColor="@color/colorWhiteText"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/slide_existing_school_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="40dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Woo punks imma show ya yo' school's details"
+            android:textColor="@color/colorWhiteText"/>
+
+    </LinearLayout>
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/slide_school_map_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:paddingTop="20dp"
+        android:visibility="visible"/>
+
+</LinearLayout>

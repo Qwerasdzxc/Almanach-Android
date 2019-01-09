@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="100dp"
+              android:padding="7dp"
+              android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/notification_item_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="8dp"
+        android:src="@drawable/ic_poll"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingStart="15dp"
+        android:layout_weight="1"
+        android:gravity="top">
+
+        <TextView
+            android:id="@+id/notification_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:textSize="21sp"
+            android:text="Some long ass title text"/>
+
+        <TextView
+            android:id="@+id/notification_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:text="2 hours ago"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:layout_gravity="end"/>
+
+    </LinearLayout>
+
+</LinearLayout>

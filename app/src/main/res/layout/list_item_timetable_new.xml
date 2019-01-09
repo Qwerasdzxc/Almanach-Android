@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingBottom="5dp"
+              android:background="@android:color/white">
+
+        <TextView
+            android:id="@+id/timetable_add_subject_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="14dp"
+            android:paddingTop="10dp"
+            android:drawableLeft="@drawable/ic_plus_gray"
+            android:drawablePadding="10dp"
+            android:text="Add subject"
+            android:textSize="17sp"
+            android:layout_gravity="left"
+            android:gravity="center"/>
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:map="http://schemas.android.com/tools"
+              android:id="@+id/fragment_slide_school"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:paddingTop="30dp"
+              android:paddingLeft="20dp"
+              android:paddingRight="20dp"
+              android:background="@color/colorPrimary">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="School "
+        android:gravity="top"
+        android:paddingBottom="20dp"
+        android:textColor="@color/colorWhiteText"
+        android:textSize="50sp"/>
+
+    <TextView
+        android:id="@+id/intro_header_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please enter your school name: "
+        android:gravity="top"
+        android:paddingBottom="25dp"
+        android:textColor="@color/colorWhiteText"
+        android:textSize="15sp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/intro_school_name_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords|textAutoCorrect"
+            android:textColor="@color/colorWhiteText"
+            android:textSize="18sp"
+            android:hint="School name"
+            android:visibility="gone"/>
+
+
+        <com.arlib.floatingsearchview.FloatingSearchView
+            android:id="@+id/intro_school_floating_search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:floatingSearch_dimBackground="false"
+            app:floatingSearch_searchHint="Search..."
+            app:floatingSearch_suggestionsListAnimDuration="250"
+            app:floatingSearch_showSearchKey="false"
+            app:floatingSearch_leftActionMode="noLeftAction"
+            app:floatingSearch_close_search_on_keyboard_dismiss="false"
+            app:floatingSearch_backgroundColor="@color/colorWhiteText"
+            app:floatingSearch_viewTextColor="@color/colorGrayText"
+            app:floatingSearch_hintTextColor="@color/colorGrayText"
+            app:floatingSearch_actionMenuOverflowColor="@color/colorWhiteText"
+            android:visibility="visible"/>
+
+    </FrameLayout>
+
+</LinearLayout>

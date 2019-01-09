@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Application settings"
+        android:key="sync_category">
+
+        <CheckBoxPreference
+            android:key="keep_login_preference"
+            android:summary="Login automatically without password"
+            android:title="Remember me"
+            android:defaultValue="true"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Personal Information"
+        android:key="personal_category">
+
+        <Preference
+            android:key="pref_account_settings"
+            android:summary="Change you account details"
+            android:title="User account settings"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

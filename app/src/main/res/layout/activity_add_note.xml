@@ -1,0 +1,114 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:orientation="vertical"
+        tools:context="com.code_dream.almanach.notes.note_list.NoteListActivity">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/add_note_toolbar"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:theme="@style/ToolbarColoredBackArrow"
+            app:popupTheme="@style/AppTheme">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorViewSeparator"
+                    android:textSize="20sp"
+                    android:text="Add new Note"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.9"/>
+
+                <TextView
+                    android:id="@+id/add_note_save_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/colorWhiteTransparentText"
+                    android:clickable="false"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:text="SAVE"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.1"/>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="15dp">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_note_title"
+                    android:inputType="textCapSentences"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:hint="Title"
+                    android:textSize="20sp"
+                    android:textColorHint="@color/dark_gray"
+                    android:maxLines="1"/>
+
+                <EditText
+                    android:id="@+id/add_note_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:ems="10"
+                    android:layout_below="@+id/add_note_title"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignRight="@+id/add_note_title"
+                    android:layout_alignEnd="@+id/add_note_title"
+                    android:layout_alignParentBottom="true"
+                    android:hint="Enter your note"
+                    android:textSize="20sp"
+                    android:textColorHint="@color/dark_gray"
+                    android:gravity="top"/>
+
+            </RelativeLayout>
+
+            <View android:layout_width="match_parent"
+                  android:layout_height="5dp"
+                  android:background="@drawable/toolbar_dropshadow"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

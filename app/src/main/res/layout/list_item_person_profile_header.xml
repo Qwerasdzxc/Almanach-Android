@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="horizontal"
+    android:background="@color/colorWhiteTransparentText"
+    android:gravity="center">
+
+        <TextView
+            android:id="@+id/person_profile_friends_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/ic_2_people"
+            android:clickable="true"
+            android:text="Friends"
+            android:textSize="14sp"
+            android:gravity="bottom|center_horizontal"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/person_profile_school_name_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:drawableTop="@drawable/ic_gallery"
+            android:text="School name"
+            android:textSize="14sp"
+            android:gravity="bottom|center_horizontal"
+            android:layout_weight="1"/>
+
+</LinearLayout>

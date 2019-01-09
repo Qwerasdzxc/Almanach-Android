@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="30dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registration "
+            android:gravity="top"
+            android:paddingBottom="20dp"
+            android:textColor="@color/colorWhiteText"
+            android:textSize="50sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please fill in the account details: "
+            android:gravity="top"
+            android:paddingBottom="25dp"
+            android:textColor="@color/colorWhiteText"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/name_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_profile"
+            android:drawablePadding="10dp"
+            android:hint="@string/prompt_fullname"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:textColor="@android:color/white"/>
+
+        <EditText
+            android:id="@+id/dob_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_calendar"
+            android:drawablePadding="10dp"
+            android:paddingTop="30dp"
+            android:hint="@string/prompt_dob"
+            android:inputType="date"
+            android:maxLines="1"
+            android:textColor="@android:color/white"/>
+
+        <EditText
+            android:id="@+id/email_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_mail"
+            android:drawablePadding="10dp"
+            android:paddingTop="30dp"
+            android:hint="@string/prompt_email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:textColor="@android:color/white"/>
+
+        <EditText
+            android:id="@+id/password_register"
+            android:textColorHint="@color/colorWhiteText"
+            android:textColor="@color/colorWhiteText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_lock"
+            android:drawablePadding="10dp"
+            android:paddingTop="30dp"
+            android:hint="@string/prompt_password"
+            android:imeActionId="@+id/login"
+            android:imeOptions="actionUnspecified"
+            android:inputType="textPassword"
+            android:maxLines="1"/>
+
+        <EditText
+            android:id="@+id/repeat_password_register"
+            android:textColorHint="@color/colorWhiteText"
+            android:textColor="@color/colorWhiteText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_lock"
+            android:drawablePadding="10dp"
+            android:paddingTop="30dp"
+            android:hint="@string/prompt_repeat_password"
+            android:imeActionId="@+id/login"
+            android:imeOptions="actionUnspecified"
+            android:inputType="textPassword"
+            android:maxLines="1"/>
+
+        <TextView
+            android:id="@+id/tosTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="25dp"
+            android:gravity="center_horizontal"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:textColor="@color/colorGrayText"
+            android:textSize="18sp"
+            android:text="@string/terms_of_use"/>
+
+    </LinearLayout>
+
+</ScrollView>

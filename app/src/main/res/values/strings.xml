@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Almanach</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_repeat_password">Repeat Password</string>
+    <string name="prompt_fullname">Full Name</string>
+    <string name="prompt_dob">Date of Birth</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_register">Register</string>
+    <string name="error_email_already_exists">This email address already exists!</string>
+    <string name="error_invalid_name">Invalid name</string>
+    <string name="error_invalid_dob">Invalid format</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_incorrect_repeated_password">Passwords don\'t match</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+    <string name="terms_of_use">
+    <![CDATA[<p>By registering, you accept the <b>Terms of Service</b> and <b>Privacy Policy.</b></p>]]>
+    </string>
+
+    <!-- Register strings -->
+    <string name="register"><![CDATA[<p>Don\'t have an account? <b>Register here</b></p>]]></string>
+
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_logout">Logout</string>
+
+    <string name="slide_1_info_text">Keep track of your grades, never forget an important assignment, keep track of your classes and much more with Almanach! The following pages will help you set up.</string>
+
+    <string name="invalid_login_credentials">E-mail and password don\'t match!</string>
+
+    <string-array name="spinner_time_selection_string_array">
+        <item>4 hours earlier</item>
+        <item>8 hours earlier</item>
+        <item>12 hours earlier</item>
+        <item>1 day earlier</item>
+        <item>2 days earlier</item>
+    </string-array>
+    <string name="title_activity_maps">Map</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="configure">Configure</string>
+    <string name="add_widget">Add widget</string>
+</resources>

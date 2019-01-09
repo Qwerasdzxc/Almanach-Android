@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="Account settings">
+
+    <PreferenceCategory
+        android:title="User account settings">
+
+        <EditTextPreference
+            android:key="change_name_preference"
+            android:title="Change name"
+            android:summary="Changes your display name"
+            android:dialogTitle="Your Name"
+            android:dialogMessage="Enter Your Complete Name"
+            android:defaultValue=""
+            android:inputType="textCapWords"/>
+
+        <Preference
+            android:title="Change date of birth"
+            android:key="date_of_birth_preference"
+            android:summary="Change day, month and year of your birth"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Account deletion">
+
+        <Preference
+            android:title="Delete account"
+            android:key="delete_account_preference"
+            android:summary="Permanently deletes all of your information"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

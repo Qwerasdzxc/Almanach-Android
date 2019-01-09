@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView android:id="@+id/person_profile_nested_scrollview"
+                                            xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            xmlns:tools="http://schemas.android.com/tools"
+                                            android:fitsSystemWindows="true"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:clipToPadding="false"
+                                            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                                            tools:context="com.code_dream.almanach.subject_profile.SubjectProfileActivity"
+                                            tools:showIn="@layout/activity_person_profile"
+                                            android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="top">
+
+        <ProgressBar
+            android:id="@+id/person_profile_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:padding="20dp"
+            android:scaleX="2"
+            android:scaleY="2"
+            android:visibility="visible"/>
+
+        <LinearLayout
+            android:id="@+id/person_profile_parent_menu"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/person_profile_swipe_refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.RecyclerView
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    android:id="@+id/person_profile_recycler_view"
+                    android:clipToPadding="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

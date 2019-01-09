@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:orientation="vertical"
+        tools:context="com.code_dream.almanach.school_profile.SchoolProfileActivity">
+
+        <android.support.v7.widget.Toolbar
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:id="@+id/timetable_activity_toolbar"
+            app:theme="@style/ToolbarColoredBackArrow"
+            app:popupTheme="@style/AppTheme">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/timetable_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorViewSeparator"
+                    android:textSize="20sp"
+                    android:fontFamily=""
+                    android:text="Class schedule"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.6"/>
+
+                <TextView
+                    android:id="@+id/timetable_edit_button"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/colorViewSeparator"
+                    android:clickable="true"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:text="EDIT"
+                    android:layout_gravity="center_vertical"/>
+
+                <ImageView
+                    android:id="@+id/timetable_sync_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_action_refresh"
+                    android:clickable="true"
+                    android:scaleX="1.5"
+                    android:scaleY="1.5"/>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+        <FrameLayout android:layout_width="match_parent"
+                     android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/timetable_calendar_view"
+                    android:visibility="visible"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    app:mcv_arrowColor="@color/colorAccent"
+                    app:mcv_calendarMode="week"
+                    app:mcv_titleAnimationOrientation="horizontal"
+                    app:mcv_firstDayOfWeek="monday"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:mcv_tileWidth="match_parent"
+                    app:mcv_tileHeight="50dp"
+                    app:mcv_showOtherDates="none"/>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="3dip"
+                    android:background="@color/colorViewSeparator"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ProgressBar
+                        android:id="@+id/timetable_progress_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:scaleX="2"
+                        android:scaleY="2"
+                        android:visibility="visible"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/timetable_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View android:layout_width="match_parent"
+                  android:layout_height="5dp"
+                  android:background="@drawable/toolbar_dropshadow"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

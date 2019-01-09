@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:descendantFocusability="beforeDescendants"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:theme="@style/AppTheme.NoActionBar">
+
+        <android.support.v7.widget.Toolbar
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:id="@+id/event_profile_toolbar"
+            app:theme="@style/ToolbarColoredBackArrow"
+            app:popupTheme="@style/AppTheme">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/timetable_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorViewSeparator"
+                    android:textSize="20sp"
+                    android:text="Event profile"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.9"/>
+
+                <TextView
+                    android:id="@+id/event_profile_save_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/colorWhiteTransparentText"
+                    android:clickable="false"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:text="SAVE"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.1"/>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+        <FrameLayout android:id="@+id/event_profile_parent_layout"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:visibility="visible">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill_vertical"
+                android:fadeScrollbars="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:text="Event title"
+                                android:textSize="20sp"/>
+
+                            <include layout="@layout/other_item_divider_small"/>
+
+                            <EditText
+                                android:id="@+id/event_profile_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:focusable="true"
+                                android:gravity="top|left"
+                                android:hint="Can't be empty"
+                                android:inputType="textMultiLine|textCapSentences"
+                                android:maxLines="2"
+                                android:minLines="1"
+                                android:textColorHint="@color/colorLightGrayText"/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:text="Subject name:"
+                                android:textSize="21sp"/>
+
+                            <include layout="@layout/other_item_divider_small"/>
+
+                            <TextView
+                                android:id="@+id/event_profile_subject_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:text="Srpski"
+                                android:textSize="20sp"/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:text="Grade:"
+                                android:textSize="21sp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/event_profile_grade_A"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:clickable="true"
+                                    android:tint="@color/colorWhiteTransparentText"
+                                    android:src="@drawable/ic_grade_a"/>
+
+                                <ImageView
+                                    android:id="@+id/event_profile_grade_B"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:paddingLeft="2dp"
+                                    android:clickable="true"
+                                    android:tint="@color/colorWhiteTransparentText"
+                                    android:src="@drawable/ic_grade_b"/>
+
+                                <ImageView
+                                    android:id="@+id/event_profile_grade_C"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:paddingLeft="1dp"
+                                    android:clickable="true"
+                                    android:tint="@color/colorWhiteTransparentText"
+                                    android:src="@drawable/ic_grade_c"/>
+
+                                <ImageView
+                                    android:id="@+id/event_profile_grade_D"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:paddingLeft="2dp"
+                                    android:clickable="true"
+                                    android:tint="@color/colorWhiteTransparentText"
+                                    android:src="@drawable/ic_grade_d"/>
+
+                                <ImageView
+                                    android:id="@+id/event_profile_grade_F"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:paddingLeft="5dp"
+                                    android:clickable="true"
+                                    android:tint="@color/colorWhiteTransparentText"
+                                    android:src="@drawable/ic_grade_f"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:text="Event date:"
+                                android:textSize="21sp"/>
+
+                            <include layout="@layout/other_item_divider_small"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/event_profile_date"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.9"
+                                    android:layout_margin="5dp"
+                                    android:clickable="true"
+                                    android:text="DD/M/YYYY"
+                                    android:textSize="18sp"/>
+
+                                <ImageView
+                                    android:id="@+id/event_profile_date_edit"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.1"
+                                    android:clickable="true"
+                                    android:src="@drawable/ic_pencil_3"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:text="Event note"
+                                android:textSize="20sp"/>
+
+                            <include layout="@layout/other_item_divider_small" />
+
+                            <EditText
+                                android:id="@+id/event_profile_note"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:focusable="true"
+                                android:gravity="top|left"
+                                android:hint="Add an event note"
+                                android:inputType="textMultiLine|textCapSentences"
+                                android:maxLines="10"
+                                android:minLines="5"
+                                android:textColorHint="@color/colorLightGrayText"/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <Button
+                        android:id="@+id/event_profile_delete_event"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:text="Delete event"
+                        android:background="@android:color/holo_red_light"
+                        android:textColor="@color/colorWhiteText"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+            <View android:layout_width="match_parent"
+                  android:layout_height="5dp"
+                  android:background="@drawable/toolbar_dropshadow"/>
+
+        </FrameLayout>
+
+        <ProgressBar
+            android:id="@+id/event_profile_loading_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="2"
+            android:scaleY="2"
+            android:layout_marginTop="200dp"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

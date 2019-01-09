@@ -1,0 +1,101 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@android:color/white"
+             tools:context="com.code_dream.almanach.calendar.FragmentCalendar">
+
+    <ProgressBar
+        android:id="@+id/calendar_progress_bar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:id="@+id/calendar_view_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.5">
+
+            <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                android:visibility="visible"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/calendar_view"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:mcv_arrowColor="@color/colorAccent"
+                app:mcv_calendarMode="month"
+                app:mcv_titleAnimationOrientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mcv_tileWidth="match_parent"
+                app:mcv_tileHeight="match_parent"
+                app:mcv_showOtherDates="defaults"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorLightGrayText"/>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:visibility="visible"
+            android:id="@+id/calendar_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"/>
+
+        <LinearLayout
+            android:id="@+id/calendar_offline_mode_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_weight="0.5">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_cloud_error"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="32dp"
+                android:paddingBottom="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="You're offline"
+                android:textSize="20sp"
+                android:paddingBottom="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To add, edit or delete your calendar events you need to be connected to the Internet."
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>
